@@ -14,4 +14,5 @@ The React Native class was ministered by Cidcley Schmitt de Oliveira.
 - To login, use email: `admin@admin.br` and password : `123`
 
 > **This project uses Expo**
+>
 > Be sure to download the Expo-go App and test the project on your phone
