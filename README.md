@@ -1,5 +1,9 @@
 # Joao Ramos React Native AT
 
+> **This project uses Expo**
+>
+> Be sure to download the Expo-go App and test the project on your phone via QR Code
+
 ### Sobre este projeto
 Aplicativo de entrega de comida utilizando React Native e Expo. Feito como um trabalho de faculdade no Instituto Infnet 2024.
 A disciplina de React Native foi ministrada pelo professor Cidcley Schmitt de Oliveira.
@@ -12,7 +16,3 @@ The React Native class was ministered by Cidcley Schmitt de Oliveira.
 - `npm i` to install dependencies
 - `npm run start` to run the project
 - To login, use email: `admin@admin.br` and password : `123`
-
-> **This project uses Expo**
->
-> Be sure to download the Expo-go App and test the project on your phone
