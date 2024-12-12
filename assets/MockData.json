@@ -1,0 +1,61 @@
+{
+  "restaurants" : [
+    {
+      "Id" :"",
+      "name": "",
+      "About" : "",
+      "profile": "",
+      "thumnail": "",
+      "Address": "",
+      "DeliveryFee": "",
+      "tags" : [],
+      "Items" : [
+        {
+          "id":"",
+          "name" : "",
+          "description" : "",
+          "price": "",
+          "image" : "",
+          "modifications" : [
+            {
+              "Heading": "",
+              "description":"",
+              "choices": "",
+              "required": "",
+              "options": [
+                {
+                  "name": "",
+                  "extra-price":"",
+                  "image":"",
+                  "max-ammount": 99
+                }
+              ]
+            }
+          ]
+
+        }  
+      ]
+    }
+  ],
+  "users" : [
+    {
+      "Id": "",
+      "name" : "",
+      "password" : "",
+      "email" : "",
+      "phone" : "",
+      "address" : "",
+      "preferedTheme": "",
+      "orders": [
+        {
+          "address":"",
+          "dateRequest":"",
+          "dateDeliver":"",
+          "status":"",
+          "items": [],
+          "restaurantId":""
+        }
+      ]
+    }
+  ]
+}
