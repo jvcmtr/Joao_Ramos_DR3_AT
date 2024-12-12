@@ -1,59 +1,1092 @@
 {
-  "restaurants" : [
+  "COMMENT" : "Dados Mocados com o Auxilio de IA. A estrutura dos dados foi montada por Joao Ramos, e a IA foi usada para Popular os campos. Alguns campos foram revisados, como por exemplo os campos de Id",
+  "restaurants": [
     {
-      "Id" :"",
-      "name": "",
-      "About" : "",
-      "profile": "",
-      "thumnail": "",
-      "Address": "",
-      "DeliveryFee": "",
-      "tags" : [],
-      "Items" : [
+      "id": "0",
+      "name": "Trattoria Italliani",
+      "about": "Pizzas e Massas quentinhas que chegam rápido na porta da sua casa.",
+      "profileImage": "https://example.com/profile-image.jpg",
+      "thumnail": "https://example.com/thumbnail.jpg",
+      "address": "Rua da Carioca, 132",
+      "deliveryFee": "5.00",
+      "tags": ["Pizza", "Comida Italiana", "Fast Food"],
+      "rating": 4.5,
+      "contact": {
+        "phone": "+55 21 1234-5678",
+        "email": "contato@trattoria.italliani.com.br",
+        "website": "https://www.trattoria.italliani.com.br"
+      },
+      "Items": [
         {
-          "id":"",
-          "name" : "",
-          "description" : "",
-          "price": "",
-          "image" : "",
-          "modifications" : [
+          "id": "0",
+          "name": "Monte sua Pizza",
+          "description": "Saborosa pizza de 10cm, 20cm ou 30cm. Escolha o seu sabor.",
+          "price": "30,00",
+          "image": "https://example.com/pizza-individual.jpg",
+          "modifications": [
             {
-              "Heading": "",
-              "description":"",
-              "choices": "",
-              "required": "",
+              "heading": "Escolha o sabor da sua pizza",
+              "description": "Escolha até dois itens.",
+              "maxChoices": "2",
+              "required": true,
               "options": [
                 {
-                  "name": "",
-                  "extra-price":"",
-                  "image":"",
-                  "max-ammount": 99
+                  "name": "Calabresa",
+                  "obs": "Com cebola",
+                  "extraPrice": "0",
+                  "image": "https://example.com/calabresa-cebola.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "Calabresa",
+                  "obs": "Sem cebola",
+                  "extraPrice": "0",
+                  "image": "https://example.com/calabresa-sem-cebola.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "Peperoni",
+                  "obs": "Pimentões e especiarias.",
+                  "extraPrice": "0",
+                  "image": "https://example.com/peperoni.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "Margeritta",
+                  "obs": "Mussarela, molho de tomate e manjericão.",
+                  "extraPrice": "0",
+                  "image": "https://example.com/margeritta.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "Presunto parma",
+                  "obs": "Presunto curado de alta qualidade.",
+                  "extraPrice": "10.00",
+                  "image": "https://example.com/presunto-parma.jpg",
+                  "maxAmmount": 1
+                }
+              ]
+            },
+            {
+              "heading": "Escolha o tamanho da pizza",
+              "description": "Opções de tamanho para a pizza.",
+              "maxChoices": "1",
+              "required": true,
+              "options": [
+                {
+                  "name": "Pequena",
+                  "obs": "Pizza de 10cm.",
+                  "extraPrice": "0",
+                  "image": "https://example.com/pizza-pequena.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "Média",
+                  "obs": "Pizza de 20cm.",
+                  "extraPrice": "10.00",
+                  "image": "https://example.com/pizza-media.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "Grande",
+                  "obs": "Pizza de 30cm.",
+                  "extraPrice": "17.00",
+                  "image": "https://example.com/pizza-grande.jpg",
+                  "maxAmmount": 1
                 }
               ]
             }
           ]
+        },
+        {
+          "id": "1",
+          "name": "Espaguete à Bolonhesa",
+          "description": "Espaguete com molho bolonhesa, carne moída, tomate e temperos italianos.",
+          "price": "25,00",
+          "image": "https://example.com/espaguete-bolonhesa.jpg",
+          "modifications": [
+            {
+              "heading": "Escolha o tipo de massa",
+              "description": "Escolha entre os tipos de massa disponíveis.",
+              "maxChoices": "1",
+              "required": true,
+              "options": [
+                {
+                  "name": "Espaguete",
+                  "obs": "Massa longa e fina.",
+                  "extraPrice": "0",
+                  "image": "https://example.com/espaguete.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "Fettuccine",
+                  "obs": "Massa larga e aveludada.",
+                  "extraPrice": "0",
+                  "image": "https://example.com/fettuccine.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "Penne",
+                  "obs": "Massa curta em formato de tubo.",
+                  "extraPrice": "0",
+                  "image": "https://example.com/penne.jpg",
+                  "maxAmmount": 1
+                }
+              ]
+            },
+            {
+              "heading": "Adicionar queijo parmesão",
+              "description": "Escolha a quantidade de queijo parmesão.",
+              "maxChoices": "1",
+              "required": false,
+              "options": [
+                {
+                  "name": "Sem queijo",
+                  "obs": "Sem adição de queijo.",
+                  "extraPrice": "0",
+                  "image": "https://example.com/sem-queijo.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "Pouco queijo",
+                  "obs": "Uma quantidade modesta.",
+                  "extraPrice": "2.00",
+                  "image": "https://example.com/pouco-queijo.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "Muito queijo",
+                  "obs": "Cobertura generosa de queijo.",
+                  "extraPrice": "4.00",
+                  "image": "https://example.com/muito-queijo.jpg",
+                  "maxAmmount": 1
+                }
+              ]
+            }
+          ]
+        }
 
-        }  
+      ]
+    },
+    {
+      "id": "1",
+      "name": "Pasta Fresca",
+      "about": "Massas frescas preparadas com os melhores ingredientes.",
+      "profileImage": "https://example.com/pasta-fresca-profile.jpg",
+      "thumnail": "https://example.com/pasta-fresca-thumbnail.jpg",
+      "address": "Avenida das Américas, 204",
+      "deliveryFee": "7.50",
+      "tags": ["Massa", "Comida Italiana", "Almoço"],
+      "rating": 4.8,
+      "contact": {
+        "phone": "+55 21 8765-4321",
+        "email": "contato@pastafresca.com.br",
+        "website": "https://www.pastafresca.com.br"
+      },
+      "Items": [
+        {
+          "id": "1",
+          "name": "Lasanha de Carne",
+          "description": "Lasanha de carne com molho branco e vermelho, recheada com queijo e presunto.",
+          "price": "35,00",
+          "image": "https://example.com/lasanha-de-carne.jpg",
+          "modifications": [
+            {
+              "heading": "Escolha o tipo de molho",
+              "description": "Escolha o molho que acompanha a lasanha.",
+              "maxChoices": "1",
+              "required": true,
+              "options": [
+                {
+                  "name": "Molho Branco",
+                  "obs": "Molho cremoso e suave.",
+                  "extraPrice": "0",
+                  "image": "https://example.com/molho-branco.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "Molho Vermelho",
+                  "obs": "Molho de tomate com temperos.",
+                  "extraPrice": "0",
+                  "image": "https://example.com/molho-vermelho.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "Molho Pesto",
+                  "obs": "Molho verde feito com manjericão.",
+                  "extraPrice": "5.00",
+                  "image": "https://example.com/molho-pesto.jpg",
+                  "maxAmmount": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "name": "Espaguete ao Alho e Óleo",
+          "description": "Espaguete simples com alho, azeite e pimenta.",
+          "price": "22,00",
+          "image": "https://example.com/espaguete-alho-oleo.jpg",
+          "modifications": []
+        },
+        {
+          "id": "2",
+          "name": "Fetuccini Carbonara",
+          "description": "Espaguete simples com alho, azeite e pimenta.",
+          "price": "22,00",
+          "image": "https://example.com/espaguete-alho-oleo.jpg",
+          "modifications": []
+        },
+        {
+          "id": "3",
+          "name": "Arroz a Piamonteze com Medalhão",
+          "description": "Saborozo Filet Mignon acompanhado de arroz a piamontese",
+          "price": "22,00",
+          "image": "https://example.com/espaguete-alho-oleo.jpg",
+          "modifications": [
+            {
+              "heading": "Escolha o ponto da carne",
+              "description": "",
+              "maxChoices": "1",
+              "required": true,
+              "options": [
+                {
+                  "name": "Mal passada",
+                  "obs": "",
+                  "extraPrice": "0",
+                  "image": "",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "Ao ponto",
+                  "obs": "",
+                  "extraPrice": "0",
+                  "image": "",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "Bem passada",
+                  "obs": "",
+                  "extraPrice": "0",
+                  "image": "",
+                  "maxAmmount": 1
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Sushi Hana",
+      "about": "Sushi, sashimi e pratos tradicionais japoneses preparados com frescor e qualidade.",
+      "profileImage": "https://example.com/sushi-hana-profile.jpg",
+      "thumnail": "https://example.com/sushi-hana-thumbnail.jpg",
+      "address": "Rua dos Três Irmãos, 45",
+      "deliveryFee": "8.00",
+      "tags": ["Comida Japonesa"],
+      "rating": 4.7,
+      "contact": {
+        "phone": "+55 21 2345-6789",
+        "email": "contato@sushihana.com.br",
+        "website": "https://www.sushihana.com.br"
+      },
+      "Items": [
+        {
+          "id": "4",
+          "name": "Sushi Variado",
+          "description": "Seleção de sushis com peixe fresco, arroz temperado e nori. 15 Unidades",
+          "price": "45,00",
+          "image": "https://example.com/sushi-variado.jpg",
+          "modifications": [
+            {
+              "heading": "Escolha o tipo de peixe",
+              "description": "Escolha o peixe que deseja nos seus sushis. Até 15 itens",
+              "maxChoices": 15,
+              "required": true,
+              "options": [
+                {
+                  "name": "Salmão",
+                  "obs": "Peixe fresco de alta qualidade.",
+                  "extraPrice": "0",
+                  "image": "https://example.com/salmao.jpg",
+                  "maxAmmount": 15
+                },
+                {
+                  "name": "Atum",
+                  "obs": "Atum fresco e macio.",
+                  "extraPrice": "0",
+                  "image": "https://example.com/atum.jpg",
+                  "maxAmmount": 15
+                },
+                {
+                  "name": "Peixe branco",
+                  "obs": "Peixe fresco, leve e delicado.",
+                  "extraPrice": "0",
+                  "image": "https://example.com/peixe-branco.jpg",
+                  "maxAmmount": 15
+                },
+                {
+                  "name": "Tamago",
+                  "obs": "Omelete japonês, suave e doce.",
+                  "extraPrice": "0",
+                  "image": "https://example.com/tamago.jpg",
+                  "maxAmmount": 15
+                }
+              ]
+            },
+            {
+              "heading": "Adicionar molho",
+              "description": "Escolha o molho para acompanhar os seus sushis.",
+              "maxChoices": 3,
+              "required": false,
+              "options": [
+                {
+                  "name": "Shoyu",
+                  "obs": "Molho de soja tradicional.",
+                  "extraPrice": "0",
+                  "image": "https://example.com/shoyu.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "Wasabi",
+                  "obs": "Condimento picante e aromático.",
+                  "extraPrice": "2.00",
+                  "image": "https://example.com/wasabi.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "Molho Teriyaki",
+                  "obs": "Molho doce e levemente salgado.",
+                  "extraPrice": "3.00",
+                  "image": "https://example.com/molho-teriyaki.jpg",
+                  "maxAmmount": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5",
+          "name": "Sashimi de Salmão",
+          "description": "Fatias frescas de salmão, cortadas finamente.",
+          "price": "38,00",
+          "image": "https://example.com/sashimi-salmao.jpg",
+          "modifications": [
+            {
+              "heading": "Escolha a quantidade",
+              "description": "Escolha o número de fatias de sashimi.",
+              "maxChoices": "1",
+              "required": true,
+              "options": [
+                {
+                  "name": "5 Fatias",
+                  "obs": "Porção para quem quer provar o sashimi.",
+                  "extraPrice": "0",
+                  "image": "https://example.com/5-fatias.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "10 Fatias",
+                  "obs": "Porção para quem quer mais sashimi.",
+                  "extraPrice": "13.00",
+                  "image": "https://example.com/10-fatias.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "15 Fatias",
+                  "obs": "Porção generosa para os amantes de sashimi.",
+                  "extraPrice": "18.00",
+                  "image": "https://example.com/15-fatias.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "20 Fatias",
+                  "obs": "Porção generosa para quem quer dividir!",
+                  "extraPrice": "29.00",
+                  "image": "https://example.com/15-fatias.jpg",
+                  "maxAmmount": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "6",
+          "name": "Tempura de Camarão",
+          "description": "Camarões empanados e fritos na massa crocante.",
+          "price": "30,00",
+          "image": "https://example.com/tempura-camaroes.jpg",
+          "modifications": [
+            {
+              "heading": "Escolha a quantidade de camarões",
+              "description": "Escolha o número de camarões no prato.",
+              "maxChoices": "1",
+              "required": true,
+              "options": [
+                {
+                  "name": "5 Camarões",
+                  "obs": "Porção para quem quer experimentar.",
+                  "extraPrice": "0",
+                  "image": "https://example.com/5-camaroes.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "8 Camarões",
+                  "obs": "Porção maior para quem quer mais sabor.",
+                  "extraPrice": "5.00",
+                  "image": "https://example.com/8-camaroes.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "12 Camarões",
+                  "obs": "Porção generosa para quem adora tempura.",
+                  "extraPrice": "10.00",
+                  "image": "https://example.com/12-camaroes.jpg",
+                  "maxAmmount": 1
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Izakaya do Japão",
+      "about": "Izakaya tradicional oferecendo pratos autênticos da culinária japonesa, como yakisoba, ramen e pratos fritos.",
+      "profileImage": "https://example.com/izakaya-do-japao-profile.jpg",
+      "thumnail": "https://example.com/izakaya-do-japao-thumbnail.jpg",
+      "address": "Avenida São João, 1020",
+      "deliveryFee": "10.00",
+      "tags": ["Comida Japonesa"],
+      "rating": 4.6,
+      "contact": {
+        "phone": "+55 21 9876-5432",
+        "email": "contato@izakaya-japao.com.br",
+        "website": "https://www.izakaya-japao.com.br"
+      },
+      "Items": [
+        {
+          "id": "7",
+          "name": "Yakisoba de Frango",
+          "description": "Macarrão frito com frango, legumes frescos e molho especial.",
+          "price": "28,00",
+          "image": "https://example.com/yakisoba-frango.jpg",
+          "modifications": [
+            {
+              "heading": "Escolha o tipo de proteína",
+              "description": "Escolha a proteína para o seu yakisoba.",
+              "maxChoices": "1",
+              "required": true,
+              "options": [
+                {
+                  "name": "Frango",
+                  "obs": "Frango fresco e suculento.",
+                  "extraPrice": "0",
+                  "image": "https://example.com/frango.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "Carne",
+                  "obs": "Carne macia e bem temperada.",
+                  "extraPrice": "3.00",
+                  "image": "https://example.com/carne.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "Tofu",
+                  "obs": "Tofu leve e suave.",
+                  "extraPrice": "2.00",
+                  "image": "https://example.com/tofu.jpg",
+                  "maxAmmount": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "8",
+          "name": "Ramen de Porco",
+          "description": "Sopa quente com macarrão, carne de porco, ovo cozido, broto de bambu e caldo aromático.",
+          "price": "32,00",
+          "image": "https://example.com/ramen-porco.jpg",
+          "modifications": [
+            {
+              "heading": "Escolha o tipo de macarrão",
+              "description": "Escolha o tipo de macarrão para o seu ramen.",
+              "maxChoices": "1",
+              "required": true,
+              "options": [
+                {
+                  "name": "Macarrão fino",
+                  "obs": "Macarrão mais delicado.",
+                  "extraPrice": "0",
+                  "image": "https://example.com/macarrao-fino.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "Macarrão grosso",
+                  "obs": "Macarrão mais espesso e firme.",
+                  "extraPrice": "2.00",
+                  "image": "https://example.com/macarrao-grosso.jpg",
+                  "maxAmmount": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "9",
+          "name": "Tempura de Legumes",
+          "description": "Legumes empanados e fritos na massa crocante.",
+          "price": "25,00",
+          "image": "https://example.com/tempura-legumes.jpg",
+          "modifications": []
+        }
+      ]
+    },
+    {
+
+      "id": "5",
+      "name": "Burger King",
+      "about": "O famoso hambúrguer com carne suculenta e opções deliciosas de acompanhamentos.",
+      "profileImage": "https://example.com/burger-king-profile.jpg",
+      "thumnail": "https://example.com/burger-king-thumbnail.jpg",
+      "address": "Avenida Paulista, 1234",
+      "deliveryFee": "6.00",
+      "tags": ["Hamburguer", "Fast Food"],
+      "rating": 4.5,
+      "contact": {
+        "phone": "+55 11 2345-6789",
+        "email": "contato@burgerking.com.br",
+        "website": "https://www.burgerking.com.br"
+      },
+      "Items": [
+        {
+          "id": "14",
+          "name": "Porção de Batata Frita",
+          "description": "Batatas fritas crocantes e saborosas, o acompanhamento perfeito para qualquer hambúrguer.",
+          "price": "12,00",
+          "image": "https://example.com/batata-frita.jpg",
+          "modifications": [
+            {
+              "heading": "Escolha o tamanho",
+              "description": "Escolha o tamanho da porção de batata frita.",
+              "maxChoices": "1",
+              "required": true,
+              "options": [
+                {
+                  "name": "Pequena",
+                  "obs": "Porção pequena, ideal para um lanche rápido.",
+                  "extraPrice": "0",
+                  "image": "https://example.com/batata-pequena.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "Média",
+                  "obs": "Porção média, ideal para dividir.",
+                  "extraPrice": "3.00",
+                  "image": "https://example.com/batata-media.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "Grande",
+                  "obs": "Porção grande, ideal para quem está com muita fome.",
+                  "extraPrice": "5.00",
+                  "image": "https://example.com/batata-grande.jpg",
+                  "maxAmmount": 1
+                }
+              ]
+            },
+            {
+              "heading": "Escolha o molho",
+              "description": "Escolha um molho para acompanhar sua porção de batata frita.",
+              "maxChoices": "1",
+              "required": false,
+              "options": [
+                {
+                  "name": "Ketchup",
+                  "obs": "Clássico e delicioso.",
+                  "extraPrice": "0",
+                  "image": "https://example.com/ketchup.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "Maionese",
+                  "obs": "Acompanhamento cremoso.",
+                  "extraPrice": "0",
+                  "image": "https://example.com/maionese.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "Barbecue",
+                  "obs": "Molho barbecue defumado.",
+                  "extraPrice": "2.00",
+                  "image": "https://example.com/barbecue.jpg",
+                  "maxAmmount": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "10",
+          "name": "Whopper",
+          "description": "O clássico hambúrguer com carne suculenta, alface, tomate, maionese e ketchup.",
+          "price": "25,00",
+          "image": "https://example.com/whopper.jpg",
+          "modifications": [
+            {
+              "heading": "Escolha o tipo de queijo",
+              "description": "Escolha o queijo para o seu hambúrguer.",
+              "maxChoices": "1",
+              "required": true,
+              "options": [
+                {
+                  "name": "Cheddar",
+                  "obs": "Queijo cremoso e saboroso.",
+                  "extraPrice": "0",
+                  "image": "https://example.com/cheddar.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "Mussarela",
+                  "obs": "Queijo suave e derretido.",
+                  "extraPrice": "0",
+                  "image": "https://example.com/mussarela.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "Sem queijo",
+                  "obs": "Sem queijo, para quem prefere assim.",
+                  "extraPrice": "0",
+                  "image": "https://example.com/sem-queijo.jpg",
+                  "maxAmmount": 1
+                }
+              ]
+            },
+            {
+              "heading": "Adicionar bacon",
+              "description": "Adicione bacon crocante ao seu Whopper.",
+              "maxChoices": "1",
+              "required": false,
+              "options": [
+                {
+                  "name": "Adicionar bacon",
+                  "obs": "Bacon crocante e saboroso.",
+                  "extraPrice": "3.00",
+                  "image": "https://example.com/bacon.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "Sem bacon",
+                  "obs": "Sem bacon, caso não prefira.",
+                  "extraPrice": "0",
+                  "image": "https://example.com/sem-bacon.jpg",
+                  "maxAmmount": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "11",
+          "name": "Cheese Bacon",
+          "description": "Hambúrguer com carne, queijo cheddar, bacon crocante e molho especial.",
+          "price": "28,00",
+          "image": "https://example.com/cheese-bacon.jpg",
+          "modifications": [
+            {
+              "heading": "Escolha o tipo de pão",
+              "description": "Escolha o pão para o seu Cheese Bacon.",
+              "maxChoices": "1",
+              "required": true,
+              "options": [
+                {
+                  "name": "Pão de hambúrguer tradicional",
+                  "obs": "Pão macio e fofo.",
+                  "extraPrice": "0",
+                  "image": "https://example.com/pao-tradicional.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "Pão de brioche",
+                  "obs": "Pão suave e levemente adocicado.",
+                  "extraPrice": "2.00",
+                  "image": "https://example.com/pao-brioche.jpg",
+                  "maxAmmount": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "16",
+          "name": "Milk Shake",
+          "description": "Delicioso milk shake cremoso feito com sorvete e leite, disponível em diversos sabores.",
+          "price": "14,00",
+          "image": "https://example.com/milkshake.jpg",
+          "modifications": [
+            {
+              "heading": "Escolha o sabor",
+              "description": "Escolha o sabor do seu milk shake.",
+              "maxChoices": "1",
+              "required": true,
+              "options": [
+                {
+                  "name": "Chocolate",
+                  "obs": "Milk shake com sabor de chocolate.",
+                  "extraPrice": "0",
+                  "image": "https://example.com/chocolate.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "Morango",
+                  "obs": "Milk shake com sabor de morango.",
+                  "extraPrice": "0",
+                  "image": "https://example.com/morango.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "Baunilha",
+                  "obs": "Milk shake com sabor de baunilha.",
+                  "extraPrice": "0",
+                  "image": "https://example.com/baunilha.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "Oreo",
+                  "obs": "Milk shake com pedaços de biscoito Oreo.",
+                  "extraPrice": "2.00",
+                  "image": "https://example.com/oreo.jpg",
+                  "maxAmmount": 1
+                }
+              ]
+            },
+            {
+              "heading": "Escolha a cobertura",
+              "description": "Escolha uma cobertura para o seu milk shake.",
+              "maxChoices": "1",
+              "required": false,
+              "options": [
+                {
+                  "name": "Chantilly",
+                  "obs": "Cobertura cremosa de chantilly.",
+                  "extraPrice": "0",
+                  "image": "https://example.com/chantilly.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "Granulado",
+                  "obs": "Granulado colorido para dar um toque especial.",
+                  "extraPrice": "1.00",
+                  "image": "https://example.com/granulado.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "Calda de chocolate",
+                  "obs": "Cobertura de calda de chocolate.",
+                  "extraPrice": "1.50",
+                  "image": "https://example.com/calda-chocolate.jpg",
+                  "maxAmmount": 1
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "McDonald's",
+      "about": "A rede de fast food mais famosa do mundo, oferecendo hambúrgueres deliciosos, batatas fritas crocantes e sobremesas irresistíveis.",
+      "profileImage": "https://example.com/mcdonalds-profile.jpg",
+      "thumnail": "https://example.com/mcdonalds-thumbnail.jpg",
+      "address": "Rua da Liberdade, 456",
+      "deliveryFee": "5.00",
+      "tags": ["Hamburguer", "Fast Food"],
+      "rating": 4.6,
+      "contact": {
+        "phone": "+55 11 3456-7890",
+        "email": "contato@mcdonalds.com.br",
+        "website": "https://www.mcdonalds.com.br"
+      },
+      "Items": [
+        {
+          "id": "12",
+          "name": "Big Mac",
+          "description": "O famoso hambúrguer com duas carnes, molho especial, alface, queijo, pepino e cebola.",
+          "price": "22,00",
+          "image": "https://example.com/big-mac.jpg",
+          "modifications": [
+            {
+              "heading": "Escolha o molho",
+              "description": "Escolha o molho para o seu Big Mac.",
+              "maxChoices": "1",
+              "required": true,
+              "options": [
+                {
+                  "name": "Molho especial",
+                  "obs": "O molho secreto do Big Mac.",
+                  "extraPrice": "0",
+                  "image": "https://example.com/molho-especial.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "Ketchup",
+                  "obs": "Ketchup tradicional.",
+                  "extraPrice": "0",
+                  "image": "https://example.com/ketchup.jpg",
+                  "maxAmmount": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "13",
+          "name": "McChicken",
+          "description": "Hambúrguer de frango crocante com maionese e alface.",
+          "price": "18,00",
+          "image": "https://example.com/mcchicken.jpg",
+          "modifications": [
+            {
+              "heading": "Escolha o tipo de molho",
+              "description": "Escolha o molho para o seu McChicken.",
+              "maxChoices": "1",
+              "required": true,
+              "options": [
+                {
+                  "name": "Maionese",
+                  "obs": "Maionese cremosa e suave.",
+                  "extraPrice": "0",
+                  "image": "https://example.com/maionese.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "Molho Barbecue",
+                  "obs": "Molho doce e defumado.",
+                  "extraPrice": "1.00",
+                  "image": "https://example.com/molho-barbecue.jpg",
+                  "maxAmmount": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "15",
+          "name": "Porção de Batata Frita",
+          "description": "Batatas fritas crocantes e saborosas, o acompanhamento perfeito para qualquer hambúrguer.",
+          "price": "12,00",
+          "image": "https://example.com/batata-frita.jpg",
+          "modifications": [
+            {
+              "heading": "Escolha o tamanho",
+              "description": "Escolha o tamanho da porção de batata frita.",
+              "maxChoices": "1",
+              "required": true,
+              "options": [
+                {
+                  "name": "Pequena",
+                  "obs": "Porção pequena, ideal para um lanche rápido.",
+                  "extraPrice": "0",
+                  "image": "https://example.com/batata-pequena.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "Média",
+                  "obs": "Porção média, ideal para dividir.",
+                  "extraPrice": "3.00",
+                  "image": "https://example.com/batata-media.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "Grande",
+                  "obs": "Porção grande, ideal para quem está com muita fome.",
+                  "extraPrice": "5.00",
+                  "image": "https://example.com/batata-grande.jpg",
+                  "maxAmmount": 1
+                }
+              ]
+            },
+            {
+              "heading": "Escolha o molho",
+              "description": "Escolha um molho para acompanhar sua porção de batata frita.",
+              "maxChoices": "1",
+              "required": false,
+              "options": [
+                {
+                  "name": "Ketchup",
+                  "obs": "Clássico e delicioso.",
+                  "extraPrice": "0",
+                  "image": "https://example.com/ketchup.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "Maionese",
+                  "obs": "Acompanhamento cremoso.",
+                  "extraPrice": "0",
+                  "image": "https://example.com/maionese.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "Barbecue",
+                  "obs": "Molho barbecue defumado.",
+                  "extraPrice": "2.00",
+                  "image": "https://example.com/barbecue.jpg",
+                  "maxAmmount": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "17",
+          "name": "Milk Shake",
+          "description": "Delicioso milk shake cremoso feito com sorvete e leite, disponível em diversos sabores.",
+          "price": "14,00",
+          "image": "https://example.com/milkshake.jpg",
+          "modifications": [
+            {
+              "heading": "Escolha o sabor",
+              "description": "Escolha o sabor do seu milk shake.",
+              "maxChoices": "1",
+              "required": true,
+              "options": [
+                {
+                  "name": "Chocolate",
+                  "obs": "Milk shake com sabor de chocolate.",
+                  "extraPrice": "0",
+                  "image": "https://example.com/chocolate.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "Morango",
+                  "obs": "Milk shake com sabor de morango.",
+                  "extraPrice": "0",
+                  "image": "https://example.com/morango.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "Baunilha",
+                  "obs": "Milk shake com sabor de baunilha.",
+                  "extraPrice": "0",
+                  "image": "https://example.com/baunilha.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "Oreo",
+                  "obs": "Milk shake com pedaços de biscoito Oreo.",
+                  "extraPrice": "2.00",
+                  "image": "https://example.com/oreo.jpg",
+                  "maxAmmount": 1
+                }
+              ]
+            },
+            {
+              "heading": "Escolha a cobertura",
+              "description": "Escolha uma cobertura para o seu milk shake.",
+              "maxChoices": "1",
+              "required": false,
+              "options": [
+                {
+                  "name": "Chantilly",
+                  "obs": "Cobertura cremosa de chantilly.",
+                  "extraPrice": "0",
+                  "image": "https://example.com/chantilly.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "Granulado",
+                  "obs": "Granulado colorido para dar um toque especial.",
+                  "extraPrice": "1.00",
+                  "image": "https://example.com/granulado.jpg",
+                  "maxAmmount": 1
+                },
+                {
+                  "name": "Calda de chocolate",
+                  "obs": "Cobertura de calda de chocolate.",
+                  "extraPrice": "1.50",
+                  "image": "https://example.com/calda-chocolate.jpg",
+                  "maxAmmount": 1
+                }
+              ]
+            }
+          ]
+        }
       ]
     }
   ],
   "users" : [
     {
-      "Id": "",
-      "name" : "",
-      "password" : "",
-      "email" : "",
-      "phone" : "",
-      "address" : "",
-      "preferedTheme": "",
+      "id": "0",
+      "name" : "Joao Ramos",
+      "password" : "123",
+      "email" : "admin@admin.br",
+      "phone" : "(+55) 21 99999-99",
+      "address" : "Rua ruaque passacarros, 99",
+      "preferedTheme": "light",
       "orders": [
         {
-          "address":"",
-          "dateRequest":"",
-          "dateDeliver":"",
-          "status":"",
-          "items": [],
-          "restaurantId":""
+          "address":"Rua ruaque passacarros, 99",
+          "dateRequest":"2024-12-12T12:00",
+          "dateDeliver":"2024-12-12T13:00",
+          "status":"Delivered",
+          "items": [
+            {
+            "id": "4",
+            "name": "Sushi Variado",
+            "description": "Seleção de sushis com peixe fresco, arroz temperado e nori. 15 Unidades",
+            "price": "45,00",
+            "image": "https://example.com/sushi-variado.jpg",
+            "modifications": [
+              {
+                "heading": "Escolha o tipo de peixe",
+                "description": "Escolha o peixe que deseja nos seus sushis. Até 15 itens",
+                "maxChoices": 15,
+                "required": true,
+                "options": [
+                  {
+                    "name": "Salmão",
+                    "obs": "Peixe fresco de alta qualidade.",
+                    "extraPrice": "0",
+                    "image": "https://example.com/salmao.jpg",
+                    "maxAmmount": 15,
+                    "ammount": 15
+                  }
+                ]
+              },
+              {
+                "heading": "Adicionar molho",
+                "description": "Escolha o molho para acompanhar os seus sushis.",
+                "maxChoices": 3,
+                "required": false,
+                "options": [
+                  {
+                    "name": "Shoyu",
+                    "obs": "Molho de soja tradicional.",
+                    "extraPrice": "0",
+                    "image": "https://example.com/shoyu.jpg",
+                    "maxAmmount": 1
+                  },
+                  {
+                    "name": "Wasabi",
+                    "obs": "Condimento picante e aromático.",
+                    "extraPrice": "2.00",
+                    "image": "https://example.com/wasabi.jpg",
+                    "maxAmmount": 1
+                  }
+                ]
+              }
+            ]
+            }
+          ],
+          "restaurantId":"3",
+          "price": "55.00"
         }
       ]
     }

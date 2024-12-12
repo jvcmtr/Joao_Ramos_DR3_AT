@@ -13,6 +13,7 @@ Food delivery app using React Native and Expo. Made as college project in Instit
 The React Native class was ministered by Cidcley Schmitt de Oliveira.
 
 ### To run this project:
+run the following items in your terminal:
 - `npm i` to install dependencies
 - `npm run start` to run the project
 - To login, use email: `admin@admin.br` and password : `123`

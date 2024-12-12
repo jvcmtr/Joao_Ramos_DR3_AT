@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "es6",
+      "dom"
+    ],
+    "module": "commonjs",
+    "jsx": "react",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": false
+  },
+  "include": [
+    "src/services/*",
+    "src/Interfaces/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "assets",
+    "src/pages",
+    "src/components"
+  ],
+  "extends": "expo/tsconfig.base"
+}
