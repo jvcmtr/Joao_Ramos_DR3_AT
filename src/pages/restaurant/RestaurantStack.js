@@ -16,12 +16,11 @@ export default function RestaurantStack({navigation}) {
       <Stack.Navigator 
         initialRouteName="Search"
           screenOptions={{
-              headerStyle: {
-                backgroundColor: colours.primary,
-                height: 30,
-                border: '',
-              },
-              headerTintColor: colours.dim
+            headerStyle: {
+              backgroundColor: colours.primary,
+              height: 50,
+            },
+            headerTintColor: colours.dim
           }}
         >
         <Stack.Screen 

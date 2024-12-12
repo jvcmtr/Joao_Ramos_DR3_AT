@@ -16,8 +16,7 @@ export default function OrderStack({navigation}) {
           screenOptions={{
               headerStyle: {
                 backgroundColor: colours.primary,
-                height: 30,
-                border: '',
+                height: 50,
               },
               headerTintColor: colours.dim
           }}

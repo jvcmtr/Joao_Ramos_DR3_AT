@@ -3,10 +3,13 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import colours from './assets/appColours'
+import pallet from './assets/ColourPalletes.module.css'
+
 import HomeScreen from './src/pages/main/HomeScreen';
 import OrderStack from './src/pages/order/OrderStack';
 import RestaurantStack from './src/pages/restaurant/RestaurantStack';
 import UserDetailsScreen from './src/pages/user/UserDetailsScreen';
+import { SafeAreaView } from 'react-native';
 
 
 
@@ -14,24 +17,25 @@ const  Tabs =  createBottomTabNavigator();
 
 export default function App() {
   return (
+    <SafeAreaView style={{flex: 1, margin:0}} className={pallet}>
+
       <NavigationContainer>
         <Tabs.Navigator 
           initialRouteName="Home"
-            screenOptions={{
-              tabBarInactiveTintColor: colours.dim,
-              tabBarActiveTintColor: colours.highlight2,
+          screenOptions={{
+            tabBarInactiveTintColor: colours.dim,
+              tabBarActiveTintColor: colours.highlight,
               tabBarStyle: {
-                backgroundColor: colours.secondary, 
-                height: 40,
+                //backgroundColor: colours.secondary, 
+                height: 50,
               },
               headerStyle: {
-                backgroundColor: colours.secondary,
-                height: 40,
+                //backgroundColor: colours.secondary,
+                height: 40
               },
-              headerTintColor: colours.highlight2
-          }}
-        >    
-
+              headerTintColor: colours.highlight
+            }}
+            >    
           <Tabs.Screen 
             name="Home" 
             component={HomeScreen}
@@ -50,6 +54,7 @@ export default function App() {
             options={icon('person-circle')}/>
           </Tabs.Navigator>
       </NavigationContainer>
+    </SafeAreaView>
   );
 }
 
@@ -59,8 +64,8 @@ const icon = (name) => {
               <Icon
                 name={focused ? name : name+'-outline'}
                 size={20}
-                color={focused ? colours.highlight2 : colours.dim}
+                color={focused ? colours.highlight : colours.dim}
               />
-            ),
+            )
           }
 }
