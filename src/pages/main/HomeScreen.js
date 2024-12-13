@@ -1,8 +1,9 @@
 import React from 'react'
 import {View, Text} from 'react-native'
-import colours from '../../../assets/appColours'
+import theme from '../../../helpers/Theme'
 
 export default function HomeScreen({navigation}){
+  const colours = React.useContext(theme)
   return(
     <View> 
       <Text> content </Text> 

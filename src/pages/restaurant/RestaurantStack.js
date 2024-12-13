@@ -1,7 +1,7 @@
 
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack';
-import colours from '../../../assets/appColours'
+import colours from '../../helpers/appColours'
 
 import SearchScreen from './SearchScreen';
 import RestaurantScreen from './RestaurantScreen';
