@@ -1,6 +1,6 @@
 import { createContext, useState, useLayoutEffect} from 'react';
-import LightTheme from './appColours.js'
-import DarkTheme from './appColours.js'
+import {LightTheme} from './appColours.js'
+import {DarkTheme }from './appColours.js'
 
 const light = 'light'
 const dark = 'dark'

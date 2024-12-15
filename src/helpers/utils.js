@@ -1,0 +1,1 @@
+export const getRestaurant = (id, all) => all? all.filter(r => r.id == id)[0] : undefined

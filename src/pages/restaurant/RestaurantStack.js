@@ -6,6 +6,7 @@ import theme from '../../helpers/Theme'
 import SearchScreen from './SearchScreen';
 import RestaurantScreen from './RestaurantScreen';
 import ItemDetailsScreen from './ItemDetailsScreen';
+import SearchBar from '../../components/SearchBar';
 
 const Stack = createStackNavigator();
 

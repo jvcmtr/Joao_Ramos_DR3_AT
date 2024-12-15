@@ -1,5 +1,6 @@
 import { User} from '../Interfaces/User'
 import {Restaurant} from '../Interfaces/Restaurant'
+import { getRandRestaurant, getRandFood } from '../helpers/RandImg';
 
 class _ApiService {
     private static SingletonInstance: _ApiService | null = null;
@@ -11,16 +12,23 @@ class _ApiService {
       if (_ApiService.SingletonInstance) {
         return _ApiService.SingletonInstance;
       }
-      try{
         
-        const mockData = require('../../assets/MockData.json');
-        const data = JSON.parse(mockData)
-        this.restaurants = data.restaurants
-        this.users = data.users
+      const mockData = require('../../assets/MockData.json');
+
+      this.restaurants = mockData.restaurants
+      
+      for (let i = 0; i < mockData.restaurants.length; i++) {
+        let url = getRandRestaurant();
+        this.restaurants[i].profileImage = url;
+        this.restaurants[i].thumnail = url;
+        
+        for (let j = 0; j < this.restaurants[i].items.length; j++) {
+          this.restaurants[i].items[j].image = getRandFood()
+        }
+        
       }
-      catch(e){
-        console.log(e)
-      }
+
+      this.users = mockData.users
       
       _ApiService.SingletonInstance = this;
     }
@@ -33,14 +41,49 @@ class _ApiService {
             console.error("ApiService.getRestaurants : argument is not string")
             return []
         }
-        if(!isFilterByTagOnly){
+        if(isFilterByTagOnly){
           return this.restaurants.filter(r => r.tags.filter(t => t.includes(str)).length > 0 )
         }
 
         return this.restaurants.filter(r => 
             r.name.includes(str)
-            || r.tags.filter(t => t.includes(str)).length > 0
+            // || r.tags.filter(t => t.includes(str)).length > 0
         ).sort((a, b )=> a.name.indexOf(str) - b.name.indexOf(str))
+    }
+
+    getItemInRestaurant(restaurantId, str){
+      if(!this.restaurants){
+        console.log("!restaurant")
+        return []
+      }
+      const r = this.restaurants.filter(r=> r.id == restaurantId)
+
+      if(r.length==0){
+        
+        console.log("r.len == 0")
+        return []
+      }
+
+      const foods = r[0].items
+      if(!foods){
+        
+        console.log("! foods")
+        return []
+      }
+      
+      if(!str){
+        
+        console.log("!str")
+        return foods;
+      }
+      if (typeof(str) != 'string'){
+          console.error("ApiService.getRestaurants : argument is not string")
+          return []
+      }
+
+      return foods.filter(r => 
+          r.name.includes(str)
+      ).sort((a, b )=> a.name.indexOf(str) - b.name.indexOf(str))
     }
 
   }

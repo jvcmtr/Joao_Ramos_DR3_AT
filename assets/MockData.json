@@ -8,15 +8,16 @@
       "profileImage": "https://example.com/profile-image.jpg",
       "thumnail": "https://example.com/thumbnail.jpg",
       "address": "Rua da Carioca, 132",
+      "deliveryTime" :  30,
       "deliveryFee": "5.00",
       "tags": ["Pizza", "Comida Italiana", "Fast Food"],
-      "rating": 4.5,
+      "rating": 2,
       "contact": {
         "phone": "+55 21 1234-5678",
         "email": "contato@trattoria.italliani.com.br",
         "website": "https://www.trattoria.italliani.com.br"
       },
-      "Items": [
+      "items": [
         {
           "id": "0",
           "name": "Monte sua Pizza",
@@ -175,15 +176,16 @@
       "profileImage": "https://example.com/pasta-fresca-profile.jpg",
       "thumnail": "https://example.com/pasta-fresca-thumbnail.jpg",
       "address": "Avenida das Américas, 204",
+      "deliveryTime" :  30,
       "deliveryFee": "7.50",
       "tags": ["Massa", "Comida Italiana", "Almoço"],
-      "rating": 4.8,
+      "rating": 4,
       "contact": {
         "phone": "+55 21 8765-4321",
         "email": "contato@pastafresca.com.br",
         "website": "https://www.pastafresca.com.br"
       },
-      "Items": [
+      "items": [
         {
           "id": "1",
           "name": "Lasanha de Carne",
@@ -285,15 +287,16 @@
       "profileImage": "https://example.com/sushi-hana-profile.jpg",
       "thumnail": "https://example.com/sushi-hana-thumbnail.jpg",
       "address": "Rua dos Três Irmãos, 45",
+      "deliveryTime" :  25,
       "deliveryFee": "8.00",
       "tags": ["Comida Japonesa"],
-      "rating": 4.7,
+      "rating": 4,
       "contact": {
         "phone": "+55 21 2345-6789",
         "email": "contato@sushihana.com.br",
         "website": "https://www.sushihana.com.br"
       },
-      "Items": [
+      "items": [
         {
           "id": "4",
           "name": "Sushi Variado",
@@ -460,15 +463,16 @@
       "profileImage": "https://example.com/izakaya-do-japao-profile.jpg",
       "thumnail": "https://example.com/izakaya-do-japao-thumbnail.jpg",
       "address": "Avenida São João, 1020",
+      "deliveryTime" :  50,
       "deliveryFee": "10.00",
       "tags": ["Comida Japonesa"],
-      "rating": 4.6,
+      "rating": 3,
       "contact": {
         "phone": "+55 21 9876-5432",
         "email": "contato@izakaya-japao.com.br",
         "website": "https://www.izakaya-japao.com.br"
       },
-      "Items": [
+      "items": [
         {
           "id": "7",
           "name": "Yakisoba de Frango",
@@ -556,15 +560,16 @@
       "profileImage": "https://example.com/burger-king-profile.jpg",
       "thumnail": "https://example.com/burger-king-thumbnail.jpg",
       "address": "Avenida Paulista, 1234",
+      "deliveryTime" :  32,
       "deliveryFee": "6.00",
       "tags": ["Hamburguer", "Fast Food"],
-      "rating": 4.5,
+      "rating": 5,
       "contact": {
         "phone": "+55 11 2345-6789",
         "email": "contato@burgerking.com.br",
         "website": "https://www.burgerking.com.br"
       },
-      "Items": [
+      "items": [
         {
           "id": "14",
           "name": "Porção de Batata Frita",
@@ -806,15 +811,16 @@
       "profileImage": "https://example.com/mcdonalds-profile.jpg",
       "thumnail": "https://example.com/mcdonalds-thumbnail.jpg",
       "address": "Rua da Liberdade, 456",
+      "deliveryTime" :  15,
       "deliveryFee": "5.00",
       "tags": ["Hamburguer", "Fast Food"],
-      "rating": 4.6,
+      "rating": 1,
       "contact": {
         "phone": "+55 11 3456-7890",
         "email": "contato@mcdonalds.com.br",
         "website": "https://www.mcdonalds.com.br"
       },
-      "Items": [
+      "items": [
         {
           "id": "12",
           "name": "Big Mac",
