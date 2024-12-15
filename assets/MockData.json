@@ -1092,7 +1092,7 @@
             }
           ],
           "restaurantId":"3",
-          "price": "55.00"
+          "finalPrice": "55.00"
         }
       ]
     }

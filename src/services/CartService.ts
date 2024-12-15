@@ -5,9 +5,25 @@ class _CartService {
       if (_CartService.SingletonInstance) {
         return _CartService.SingletonInstance;
       }  
+
+      this.cart = [],
+      this.restaurant = undefined
+
       _CartService.SingletonInstance = this;
     }
 
+    add(obj){
+      this.cart.push(obj)
+    }
+    getItems(obj){
+      return this.cart
+    }
+    clear(){
+      this.cart = []
+    }
+    restaurantMatch(id){
+      return this.restaurant == id
+    }
   }
   
   const CartService = new _CartService();

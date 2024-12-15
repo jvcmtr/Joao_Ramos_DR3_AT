@@ -8,8 +8,12 @@ export default function Counter(props){
     const style = getStyle(colours)
 
     const add = (val) =>{
+        if(props.disabled && val>0 ){
+            return
+        }
+
         let i = props.value + val
-        if(i< props.min || i >= props.max){
+        if(i< props.min || i > props.max){
             return
         }
         props.onChange(i)
