@@ -1,7 +1,7 @@
 
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack';
-import colours from '../../helpers/appColours'
+import theme from '../../helpers/Theme'
 
 import SearchScreen from './SearchScreen';
 import RestaurantScreen from './RestaurantScreen';
@@ -9,8 +9,8 @@ import ItemDetailsScreen from './ItemDetailsScreen';
 
 const Stack = createStackNavigator();
 
-
-export default function RestaurantStack({navigation}) {
+export default function Screen({navigation}){
+  const colours = React.useContext(theme)
   const data = {}
   return(
       <Stack.Navigator 

@@ -1,8 +1,6 @@
 import { ContextProvider } from './src/helpers/Context';
-import { ThemeProvider } from 'react-native-paper';
+import { ThemeProvider } from './src/helpers/Theme';
 import AppNavigation from './AppNavigation';
-
-const  Tabs =  createBottomTabNavigator();
 
 export default function App() {
   

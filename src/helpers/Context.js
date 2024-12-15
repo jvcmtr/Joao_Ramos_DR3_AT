@@ -1,6 +1,6 @@
 import { createContext, useState, useLayoutEffect} from 'react';
-import ApiService from './ApiService'
-import CacheService from './StorageService'
+import ApiService from '../services/ApiService'
+import CacheService from '../services/StorageService'
 
 const Context = createContext();
 export default Context;

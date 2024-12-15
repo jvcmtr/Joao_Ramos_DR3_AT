@@ -6,7 +6,7 @@ const light = 'light'
 const dark = 'dark'
 
 const ColourPalete = createContext();
-export default Context;
+export default ColourPalete;
 
 
 export const ThemeProvider = ({ children }) => {
@@ -17,13 +17,13 @@ export const ThemeProvider = ({ children }) => {
     }
 
   return (
-    <Context.Provider value={{
+    <ColourPalete.Provider value={{
         toggleTheme : ()=> setTheme(curTheme==light? dark : light),
         currentTheme : curTheme,
         ...getPallete()
     }}>
       {children}
-    </Context.Provider>
+    </ColourPalete.Provider>
   );
 };
 

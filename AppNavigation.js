@@ -8,13 +8,24 @@ import HomeScreen from './src/pages/main/HomeScreen';
 import OrderStack from './src/pages/order/OrderStack';
 import RestaurantStack from './src/pages/restaurant/RestaurantStack';
 import UserDetailsScreen from './src/pages/user/UserDetailsScreen';
-import theme from './src/helpers/Theme'
 
+import theme from './src/helpers/Theme'
 const  Tabs =  createBottomTabNavigator();
 
 export default function AppNavigation() {
-    const colours = useContext(theme);
+  const colours = useContext(theme);
   
+  const icon = (name) => {
+    return {
+              tabBarIcon: ({ focused, color, size }) => (
+                <Icon
+                  name={focused ? name : name+'-outline'}
+                  size={20}
+                  color={focused ? colours.highlight : colours.dim}
+                />
+              )
+            }
+  }
     return (
     <NavigationContainer>
         <SafeAreaView style={{flex: 1, margin:0}} >
@@ -58,16 +69,4 @@ export default function AppNavigation() {
           </SafeAreaView>
     </NavigationContainer>
   );
-}
-
-const icon = (name) => {
-  return {
-            tabBarIcon: ({ focused, color, size }) => (
-              <Icon
-                name={focused ? name : name+'-outline'}
-                size={20}
-                color={focused ? colours.highlight : colours.dim}
-              />
-            )
-          }
 }
