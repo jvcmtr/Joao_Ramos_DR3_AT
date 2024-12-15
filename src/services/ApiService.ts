@@ -53,27 +53,20 @@ class _ApiService {
 
     getItemInRestaurant(restaurantId, str){
       if(!this.restaurants){
-        console.log("!restaurant")
         return []
       }
       const r = this.restaurants.filter(r=> r.id == restaurantId)
 
       if(r.length==0){
-        
-        console.log("r.len == 0")
         return []
       }
 
       const foods = r[0].items
       if(!foods){
-        
-        console.log("! foods")
         return []
       }
       
       if(!str){
-        
-        console.log("!str")
         return foods;
       }
       if (typeof(str) != 'string'){

@@ -23,7 +23,6 @@ export default function RestaurantScreen(props){
   }
 
   const handleSearch = (value) =>{
-    console.log(value)
     let foods = ApiService.getItemInRestaurant(restaurant.id, value)
     setResults(foods.concat(foods, foods))
   }

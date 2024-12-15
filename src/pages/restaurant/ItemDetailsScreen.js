@@ -1,12 +1,14 @@
 import React from 'react'
 import {View, ScrollView, StyleSheet, Text} from 'react-native'
+
 import theme from '../../helpers/Theme'
 import Context from '../../helpers/Context'
+import NotificationService from '../../services/NotificationService'
+import CartService from '../../services/CartService'
 
 import MyImage from '../../components/baseComponents/MyImage'
 import Button from '../../components/Button'
 import ItemModification from '../../components/ItemModification'
-import CartService from '../../services/CartService'
 
 export default function ItemDetails(props){
 
@@ -40,8 +42,28 @@ export default function ItemDetails(props){
       modifications: [...modifications], 
       ItemFullPrice: getTotalPrice()  
     }
-    CartService.addToCart(obj)
+
+    if(CartService.restaurantMatch(context.restaurant.id)){
+      
+      CartService.add(obj, context.restaurant.id)
+      props.navigation.goBack()
+      
+    }
+    else{
+      
+      NotificationService.sendConfirmation(
+        "Limpar sacola", 
+        "Os itens no seu carrinho são de outro restaurante, deseja excluir os itens que estão no seu carrinho?",
+        onConfirm = ()=>{
+          CartService.clear()
+          CartService.add(obj, context.restaurant.id)
+          props.navigation.goBack()
+        }
+      )
+
+    }
   }
+
 
 
   return(
