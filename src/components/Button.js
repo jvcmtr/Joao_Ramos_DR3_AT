@@ -2,7 +2,7 @@ import React from 'react'
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native'
 import theme from '../helpers/Theme'
 
-export default function ListItem(props){
+export default function Button(props){
   const colours = React.useContext(theme)
   
   return(
