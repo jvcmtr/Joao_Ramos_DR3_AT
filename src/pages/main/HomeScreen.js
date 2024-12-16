@@ -5,7 +5,7 @@ import theme from '../../helpers/Theme'
 export default function HomeScreen({navigation}){
   const colours = React.useContext(theme)
   return(
-    <View> 
+    <View style={{backgroundColor: colours.secondary}}> 
       <Text> content </Text> 
     </View>
   )

@@ -32,7 +32,11 @@ class _ApiService {
       
       _ApiService.SingletonInstance = this;
     }
-    
+
+    loginWith({username, password}){
+      return this.users.filter(u => u.email == username && u.password == password)[0] 
+    }
+
     getRestaurants(str, isFilterByTagOnly = false){
         if(!str){
             return this.restaurants;

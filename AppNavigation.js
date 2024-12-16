@@ -10,11 +10,20 @@ import RestaurantStack from './src/pages/restaurant/RestaurantStack';
 import UserDetailsScreen from './src/pages/user/UserDetailsScreen';
 
 import theme from './src/helpers/Theme'
+import Context from './src/helpers/Context';
+import LoginScreen from './src/pages/main/LoginScreen';
+
 const  Tabs =  createBottomTabNavigator();
 
 export default function AppNavigation() {
   const colours = useContext(theme);
+  const context = useContext(Context);
   
+  if(!context.user){
+    return( <LoginScreen/>)
+  }
+
+
   const icon = (name) => {
     return {
               tabBarIcon: ({ focused, color, size }) => (
@@ -26,6 +35,7 @@ export default function AppNavigation() {
               )
             }
   }
+
     return (
     <NavigationContainer>
         <SafeAreaView style={{flex: 1, margin:0}} >
@@ -35,11 +45,11 @@ export default function AppNavigation() {
                 tabBarInactiveTintColor: colours.dim,
                 tabBarActiveTintColor: colours.highlight,
                 tabBarStyle: {
-                  //backgroundColor: colours.secondary, 
+                  backgroundColor: colours.primary, 
                   height: 50,
                 },
                 headerStyle: {
-                  //backgroundColor: colours.secondary,
+                  backgroundColor: colours.primary,
                   height: 40
                 },
                 headerTintColor: colours.highlight

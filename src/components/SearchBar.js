@@ -14,9 +14,10 @@ export default function SearchBar(props){
         <TextInput 
             onChangeText={props.onChange} 
             placeholder={props.placeholder}
+            placeholderTextColor={colours.dim}
             style={{...s.input, ...props.style}}/>
 
-        <Icon name={'search'} size={25} color={colours.dim}/>
+        <Icon name={'search'} size={25} color={colours.txtPrimary}/>
         
         </View>
     )
@@ -24,19 +25,18 @@ export default function SearchBar(props){
 
 const styles = (colours) => StyleSheet.create({
     container: {
-        flex:1,
         flexDirection: 'row',
         alignItems: 'center',
         paddingEnd: 30,
         margin: 10,
         minHeight: 50,
         
-        backgroundColor: colours.secondary,
+        backgroundColor: colours.terciary,
     },
     input: {
         flex:1,
         padding: 10,
         fontSize: 16,
-        color: colours.txtSecondary,
+        color: colours.txtPrimary,
     }
   });

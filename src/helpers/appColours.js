@@ -1,7 +1,7 @@
 export const LightTheme = {
 	primary: "#ffffff",
-	secondary: "#dddddd",
-	terciary: "#aaaaaa",
+	secondary: "#cccccc",
+	terciary: "#dddddd",
 	highlight: "#ff3030",
 	txtHighlight: "#ffffff",
 	txtPrimary: "#202020",
@@ -10,12 +10,12 @@ export const LightTheme = {
 }
 
 export const DarkTheme = {
-	primary: "#000000",
-	secondary: "#202020",
-	terciary: "#606000",
+	primary: "#101010",
+	secondary: "#303030",
+	terciary: "#202020",
 	highlight: "#ffaa00",
-	txtHighlight: "#ffffff",
-	txtPrimary: "#ffffff",
-	txtSecondary: "#ffffff",
-	dim: "#606060",
+	txtHighlight: "#400000",
+	txtPrimary: "#dddddd",
+	txtSecondary: "#dddddd",
+	dim: "#aaaaaa",
 }

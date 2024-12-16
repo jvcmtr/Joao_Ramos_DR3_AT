@@ -10,6 +10,7 @@ import ApiService from '../../services/ApiService'
 
 export default function RestaurantScreen(props){
 
+  const colours = React.useContext(theme)
   const context = React.useContext(Context)
   const restaurant = context.restaurant;
   const [results, setResults] = React.useState([])
@@ -19,7 +20,7 @@ export default function RestaurantScreen(props){
   },[])
 
   if(context.isLoading || !restaurant){
-    return (<View style={{flex:1}}> </View>)
+    return (<View style={{flex:1, backgroundColor: colours.secondary}}> </View>)
   }
 
   const handleSearch = (value) =>{
@@ -27,11 +28,11 @@ export default function RestaurantScreen(props){
     setResults(foods.concat(foods, foods))
   }
   const nav = (val) => {
-    props.navigation.navigate("Details",val)
+    props.navigation.navigate("Details",{food: val})
   }
 
   return(
-    <ScrollView> 
+    <ScrollView style={{backgroundColor: colours.secondary}}>
       <View style={styles.section}>
         <RestaurantDetails restaurant={restaurant}/>
         <SearchBar placeholder={"O que você procura?"} onChange={(ev)=> handleSearch(ev)}/>

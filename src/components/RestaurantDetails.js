@@ -2,7 +2,6 @@ import React from 'react'
 import {View, Text, StyleSheet} from 'react-native'
 
 import theme from '../helpers/Theme'
-import ListItem from './baseComponents/ListItem'
 import MyImg from './baseComponents/MyImage'
 import Rating from './baseComponents/Rating'
 
@@ -17,13 +16,17 @@ export default function RestaurantListItem(props){
 
     return(
         <View style={styles.container}>
-            <MyImg uri={restaurant.thumnail} style={s.img}/>
+            {
+                props.hideImg?
+                (<></>)
+                :(<MyImg uri={restaurant.thumnail} style={s.img}/>)
+            }
             <View style={s.textContainer}>
                 <Text style={s.name}>{restaurant.name}</Text>
-                <Text style={s.details}>{restaurant.description}</Text>
+                <Text style={s.description}>{restaurant.about}</Text>
                 <Rating score={restaurant.rating}/>
-                <Text style={s.details}>{restaurant.address}</Text>
-                <Text style={s.deliveryFee}> Entrega : {restaurant.deliveryFee} - Aprox. {restaurant.deliveryTime}min </Text>
+                <Text style={s.description}>{restaurant.address}</Text>
+                <Text style={s.deliveryFee}> Entrega : R$ {restaurant.deliveryFee} - Aprox. {restaurant.deliveryTime}min </Text>
             </View>
         </View>
     )
@@ -48,7 +51,8 @@ const styles = (colours) => StyleSheet.create({
     },
     description:{
         fontSize: 12,
-        color: colours.dim
+        color: colours.dim,
+        marginBottom: 10
     },
     deliveryFee:{
         fontWeight: 600,

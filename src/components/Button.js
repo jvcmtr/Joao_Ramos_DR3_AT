@@ -12,7 +12,7 @@ export default function Button(props){
         ...props.style 
         }} 
       onPress={props.onClick}> 
-      <Text style={styles(colours).txtContainer}>{props.title}</Text>
+      <Text style={{...styles(colours).txtContainer, ...props.textStyle}}>{props.title}</Text>
       {props.children}
     </TouchableOpacity>
   )
@@ -20,7 +20,6 @@ export default function Button(props){
 
 const styles = (colours) => StyleSheet.create({
     container: {
-        height: 50,
         width: '80%',
         padding: 10, 
         paddingLeft: 10,

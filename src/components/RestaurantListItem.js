@@ -42,7 +42,7 @@ const styles = (colours) => StyleSheet.create({
         color: colours.dim
     },
     name:{
-        fontSize: 20,
+        fontSize: 18,
         color: colours.txtPrimary
     }
   });

@@ -23,7 +23,7 @@ export default function ItemModification(props){
         
         const ammount = opt.reduce((tot, o) => tot + o.ammount, 0)
         setAmmount(ammount)
-        props.onChange({...modification , ...opt, modPrice:  calcTotalValue(opt), isValid: (modification.required && ammount>0) })
+        props.onChange({...modification , options: [...opt], modPrice:  calcTotalValue(opt), isValid: (modification.required && ammount>0) })
     }
 
     const calcTotalValue = (options) =>{
@@ -80,7 +80,7 @@ const styles = (colours) => StyleSheet.create({
         elevation: 8, 
     },
     hContainer: {
-        backgroundColor: colours.secondary,
+        backgroundColor: colours.terciary,
         padding: 20,
         borderWidth: 0, 
         flexDirection:'column'

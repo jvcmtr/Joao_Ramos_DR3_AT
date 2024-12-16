@@ -19,27 +19,38 @@ export default function ItemOption(props){
     }
 
     return(
-        <ListItem onClick={props.onClick} id={props.id} style={{borderWidth: 0, height:80}}> 
-        <View style={s.container}>
-            <Text style={s.name}>{option.name}</Text> 
-            <Text style={s.description}>{option.obs}</Text>
-            <Text style={s.price}> +  R$ {option.extraPrice} </Text>
-        </View>{
-            option.maxAmmount > 1?
-            (<Counter min={0} max={option.maxAmmount} value={choseAmmount} disabled={props.disabled} onChange={updateAmmount} />)
-            : (<Counter min={0} max={option.maxAmmount} value={choseAmmount} disabled={props.disabled} onChange={updateAmmount}/>)
-        }
+        <ListItem onClick={props.onClick} id={props.id} style={s.listItem}> 
+            <View style={s.container}>
+                <Text style={s.name}>{option.name}</Text> 
+                <Text style={s.description}>{option.obs}</Text>
+                {
+                    option.extraPrice > 0?
+                    (<Text style={s.price}> +  R$ {option.extraPrice} </Text>)
+                    :(<></>)
+                }
+            </View>
+            {
+                option.maxAmmount > 1?
+                (<Counter min={0} max={option.maxAmmount} value={choseAmmount} disabled={props.disabled} onChange={updateAmmount} />)
+                : (<Counter min={0} max={option.maxAmmount} value={choseAmmount} disabled={props.disabled} onChange={updateAmmount}/>)
+            }
         </ListItem>
     )
 }
 
 const styles = (colours) => StyleSheet.create({
+    listItem:{
+        borderWidth: 0, 
+        height:80,
+        padding: 5,
+        paddingLeft: 20,
+        paddingRight: 20,
+    },
     container: {
         flex:1,
         justifyContent: 'start',
         alignItems: 'start',
         flexDirection: 'column',
-        padding: 20
     },
     price:{
         fontSize: 14,

@@ -18,7 +18,7 @@ export default function Screen(props){
   },[context.data.length])
 
   if(context.isLoading){
-    return (<View style={{flex:1}}> </View>)
+    return (<View style={{flex:1, backgroundColor: colours.secondary}}> </View>)
   }
 
   const handleSearch = (value) =>{
@@ -32,7 +32,7 @@ export default function Screen(props){
   }
 
   return(
-    <View style={styles.container}> 
+    <View style={{...styles.container, flex:1, backgroundColor: colours.secondary}}> 
       <SearchBar placeholder={"Pesquise por um restaurante"} onChange={(ev)=> handleSearch(ev)}/>
       <FlatList
           data={results}

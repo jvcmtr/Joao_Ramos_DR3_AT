@@ -39,19 +39,22 @@ const getStyle = (colours) => StyleSheet.create({
     container:{
         backgroundColor: colours.secondary,
         flexDirection: 'row',
+        elevation: 4
     },
     txt:{
         color: colours.txtSecondary,
         fontSize: 12,
-        padding: 5,
-        paddingLeft: 10,
-        paddingRight: 10,
+        padding: 15,
+        paddingLeft: 20,
+        paddingRight: 20,
         textAlign: 'center'
     },
     btn: {
-        padding: 5, 
+        padding: 15, 
         paddingLeft: 5,
-        borderRadius: 5,
+        textAlign: 'center',
+        justifyContent: 'center',
+        alignItems: 'center',
         backgroundColor: colours.highlight,
     },
     txtContainer:{

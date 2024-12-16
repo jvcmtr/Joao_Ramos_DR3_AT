@@ -1,24 +1,24 @@
 import React from 'react'
 import {View, ScrollView, StyleSheet, Text} from 'react-native'
 
-import theme from '../../helpers/Theme'
 import Context from '../../helpers/Context'
 import NotificationService from '../../services/NotificationService'
 import CartService from '../../services/CartService'
 
-import MyImage from '../../components/baseComponents/MyImage'
+import ItemDetail from '../../components/ItemDetail'
 import Button from '../../components/Button'
 import ItemModification from '../../components/ItemModification'
+import theme from '../../helpers/Theme'
 
 export default function ItemDetails(props){
 
-  const context = React.useContext(Context)
   const colours = React.useContext(theme)
-  const [food, setFood] = React.useState(props.route.params);
+  const context = React.useContext(Context)
+  const [food, setFood] = React.useState(props.route.params.food);
   const [modifications, setModifications] = React.useState([]) 
 
   if(context.isLoading ){
-    return (<View style={{flex:1}}> </View>)
+    return (<View style={{flex:1, backgroundColor: colours.secondary}}> </View>)
   }
 
   const nav = (val) => {
@@ -44,7 +44,6 @@ export default function ItemDetails(props){
     }
 
     if(CartService.restaurantMatch(context.restaurant.id)){
-      
       CartService.add(obj, context.restaurant.id)
       props.navigation.goBack()
       
@@ -54,7 +53,7 @@ export default function ItemDetails(props){
       NotificationService.sendConfirmation(
         "Limpar sacola", 
         "Os itens no seu carrinho são de outro restaurante, deseja excluir os itens que estão no seu carrinho?",
-        onConfirm = ()=>{
+        ()=>{
           CartService.clear()
           CartService.add(obj, context.restaurant.id)
           props.navigation.goBack()
@@ -65,27 +64,32 @@ export default function ItemDetails(props){
   }
 
 
-
+  const s = styles(colours)
   return(
-    <ScrollView> 
-      <MyImage uri={food.image} style={styles.img}/>
+    <ScrollView style={{flex:1, backgroundColor: colours.secondary}}> 
+      <ItemDetail item={food}/>
       {
         food.modifications.map((item, i)=>(
           <ItemModification modification={item} id={i} onChange={handle}/>
         ))
       }
-      <View style={{alignItems: 'center'}}>
-        <Text style={styles.heading}> Total do item : R$ { getTotalPrice() } </Text>
+      <View style={s.section}>
+        <Text style={s.heading}> Total do item : R$ { getTotalPrice() } </Text>
         <Button title={"Adicionar ao carrinho"} onClick={submit}/>
       </View>
     </ScrollView>
   )
 }
-const styles = StyleSheet.create({
+const styles = (colours) => StyleSheet.create({
   section:{
-    flex:1,
-    marginBottom: 50,
-    marginTop: '-50%'
+    backgroundColor: colours.primary,
+    alignItems: 'center', 
+    textAlign: 'center',
+    justifyContent: 'center',
+    marginTop: 50,
+    marginBottom: 30,
+    padding: 10,
+    elevation: 8 
   },
   img:{
       width: '100%',
