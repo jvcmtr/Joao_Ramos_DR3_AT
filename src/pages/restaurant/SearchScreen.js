@@ -8,10 +8,15 @@ import SearchBar from '../../components/SearchBar'
 import { createNativeWrapper } from 'react-native-gesture-handler'
 import ApiService from '../../services/ApiService'
 
-export default function Screen(props){
+export default function SearchScreen(props){
   const context = React.useContext(Context)
   const colours = React.useContext(theme)
   const [results, setResults] = React.useState([])
+  
+  const params = props.route.params;
+  if(params.tabRoute?.Redirectt == "Restaurant"){
+    props.navigation.navigate("Restaurant")
+  }
 
   React.useEffect(()=>{
     handleSearch("")

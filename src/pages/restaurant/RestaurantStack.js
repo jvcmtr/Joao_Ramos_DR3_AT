@@ -10,9 +10,10 @@ import SearchBar from '../../components/SearchBar';
 
 const Stack = createStackNavigator();
 
-export default function Screen({navigation}){
+export default function Screen({navigation, route}){
   const colours = React.useContext(theme)
   const data = {}
+
   return(
       <Stack.Navigator 
         initialRouteName="Search"
@@ -27,16 +28,17 @@ export default function Screen({navigation}){
         <Stack.Screen 
           name="Search" 
           component={SearchScreen}
-          initialParams={{user: data, tabNav: navigation}}  
+          initialParams={{user: data, tabNav: navigation, tabRoute: route }}  
           />
         <Stack.Screen 
           name="Restaurant" 
           component={RestaurantScreen}
-          initialParams={{user: data, tabNav: navigation}} />
+          initialParams={{user: data, tabNav: navigation, tabRoute: route }}  
+        />
         <Stack.Screen 
           name="Details" 
           component={ItemDetailsScreen}
-          initialParams={{user: data, tabNav: navigation}}  
+          initialParams={{user: data, tabNav: navigation, tabRoute: route }}    
           />
       </Stack.Navigator>
   )

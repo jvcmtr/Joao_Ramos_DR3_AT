@@ -12,7 +12,7 @@ export default function HomeScreen({navigation}){
 
   const nav = (val) => {
     context.setRestaurant(val)
-    navigation.navigate("Restaurants", {GO_TO: 'Restaurants'})
+    navigation.navigate("Restaurants", {Redirect: 'Restaurant'})
   }
 
   return(

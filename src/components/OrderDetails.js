@@ -14,7 +14,6 @@ export default function OrderDetails(props){
     
     const orderBasePrice = props.order.reduce((t, i) => t + i.ItemFullPrice, 0)
     const user = props.user
-    console.log(user)
 
     return(
         <View style={s.container}>
